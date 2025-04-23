@@ -1,6 +1,6 @@
 document.getElementById('contactForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+    const AUTH_TOKEN = "9e3f9a1dc1632d6fdbdea1047029a18d6ba515a5eeaf5466ccf2a5fad841aad0";
     const form = e.target;
     // const submitBtn = form.querySelector('button[type="submit"]');
     const submitBtn = document.querySelector('.submit-btn');
@@ -20,8 +20,12 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
       // Send to your Lambda function
       const response = await fetch("https://radns940n6.execute-api.eu-north-1.amazonaws.com/default/my_website", {
         method: "POST",
+        mode: 'cors',
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'Origin': 'https://andyamponsah.netlify.app',
+            'Access-Control-Allow-Origin': 'https://andyamponsah.netlify.app',
+            auth_token: AUTH_TOKEN,
         },
         body: JSON.stringify(formData)
       });
