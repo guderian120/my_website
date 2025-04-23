@@ -47,10 +47,10 @@ https://www.tooplate.com/view/2115-marvel
                         <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
+                        <a href="/resume.html" class="nav-link"><span data-hover="Resume">Resume</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
+                        <a href="/contact.html" class="nav-link"><span data-hover="Contact">Contact</span></a>
                     </li>
                 </ul>
 
@@ -128,7 +128,7 @@ https://www.tooplate.com/view/2115-marvel
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="images/project/l.png" class="img-fluid" alt="project image">
+                            <img src="images/project/ktech.png" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
@@ -277,7 +277,7 @@ https://www.tooplate.com/view/2115-marvel
                 </div>
               </form>
             </div>
-          </div>
+          </div> 
 
         </div>
       </div>
@@ -290,7 +290,7 @@ https://www.tooplate.com/view/2115-marvel
 
                     <div class="col-lg-12 col-12">                                
                       <p class="copyright-text text-center">Copyright &copy; 2025 Andy Amponsah . All rights reserved</p>
-                      <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://www.facebook.com/tooplate">Andy Amponsah</a></p>
+                      <p class="copyright-text text-center">Designed by <a rel="nofollow" href="https://github.com/guderian120" >Andy Amponsah</a></p>
                   </div>
                     
                </div>
@@ -299,38 +299,9 @@ https://www.tooplate.com/view/2115-marvel
 
 
 
-     <script>
-      document.getElementById("contactForm").addEventListener("submit", async function(e) {
-        e.preventDefault(); // prevent default form submission
-      
-        const form = e.target;
-        const formData = {
-          name: form.name.value,
-          email: form.email.value,
-          message: form.message.value
-        };
-      
-        try {
-          const response = await fetch("https://radns940n6.execute-api.eu-north-1.amazonaws.com/default/my_website", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(formData)
-          });
-      
-          const result = await response.json();
-      
-          console.log("Response from server:", result);
-        } catch (error) {
-          console.error("Request failed:", error);
-          // document.getElementById("statusMsg").textContent = "Network error. Please try again.";
-        }
-      });
-      </script>
-      
+   
      
-     </script>
+  
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -339,6 +310,7 @@ https://www.tooplate.com/view/2115-marvel
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script src="/js/success.js"></script>
 
   </body>
 </html>
