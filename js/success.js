@@ -18,18 +18,14 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
       };
       
       // Send to your Lambda function
-      const response = await fetch("https://radns940n6.execute-api.eu-north-1.amazonaws.com/default/my_website", {
+      const response = await fetch("https://sf6u861jc7.execute-api.eu-north-1.amazonaws.com/default/andynetlify", {
         method: "POST",
-        mode: 'cors',
         headers: {
           "Content-Type": "application/json",
-          'Origin': 'https://andyamponsah.netlify.app',
-            'Access-Control-Allow-Origin': 'https://andyamponsah.netlify.app',
-            auth_token: AUTH_TOKEN,
+          "auth_token": AUTH_TOKEN  // Only include if your API requires it
         },
         body: JSON.stringify(formData)
       });
-      
       if (response.ok) {
         // Redirect to success page
         window.location.href = '/success.html';
