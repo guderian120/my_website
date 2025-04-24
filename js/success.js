@@ -18,7 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', async (e) => {
       };
       
       // Send to your Lambda function
-      const response = await fetch("https://sf6u861jc7.execute-api.eu-north-1.amazonaws.com/default/andynetlify", {
+      const response = await fetch("https://6o46wt8gye.execute-api.eu-north-1.amazonaws.com/prod/andynetlify/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
