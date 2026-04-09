@@ -93,18 +93,17 @@ a { color: inherit; text-decoration: none; }
    ================================================================ */
 .display {
   font-family: var(--f-display);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 0.92;
   letter-spacing: -0.02em;
   text-transform: uppercase;
   font-size: var(--t-3xl);
-  /* OpenType: tabular for alignment if numbers appear */
   font-variant-numeric: tabular-nums;
 }
 
 .eyebrow {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-xs);
   letter-spacing: 0.15em;
   text-transform: uppercase;
@@ -255,7 +254,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-logo {
   font-family: var(--f-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: var(--t-lg);
   letter-spacing: -0.02em;
   text-transform: uppercase;
@@ -271,7 +270,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-links a {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-xs);
   letter-spacing: 0.10em;
   text-transform: uppercase;
@@ -376,7 +375,7 @@ a { color: inherit; text-decoration: none; }
 
 .metric-num {
   font-family: var(--f-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: var(--t-2xl);
   color: var(--accent-hi);
   line-height: 1;
@@ -415,7 +414,7 @@ a { color: inherit; text-decoration: none; }
 
 .ticker-item {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-sm);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -446,7 +445,7 @@ a { color: inherit; text-decoration: none; }
 
 .sec-num {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-xs);
   letter-spacing: 0.10em;
   color: var(--accent);
@@ -454,7 +453,7 @@ a { color: inherit; text-decoration: none; }
 
 .sec-title {
   font-family: var(--f-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: var(--t-xl);
   text-transform: uppercase;
   letter-spacing: -0.01em;
@@ -486,21 +485,21 @@ a { color: inherit; text-decoration: none; }
 
 .exp-date {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-xs);
   color: var(--t-lo);
   letter-spacing: 0.06em;
 }
 .exp-company {
   font-family: var(--f-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: var(--t-lg);
   color: var(--t-hi);
   line-height: 1.1;
 }
 .exp-role {
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-xs);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -509,7 +508,7 @@ a { color: inherit; text-decoration: none; }
 
 .exp-body h3 {
   font-family: var(--f-display);
-  font-weight: 800;
+  font-weight: 600;
   font-size: var(--t-xl);
   letter-spacing: -0.01em;
   margin-bottom: var(--s3);
@@ -573,7 +572,7 @@ a { color: inherit; text-decoration: none; }
 
 .proj-card h3 {
   font-family: var(--f-display);
-  font-weight: 800;
+  font-weight: 600;
   font-size: var(--t-xl);
   letter-spacing: -0.01em;
   line-height: 1.1;
@@ -648,7 +647,7 @@ a { color: inherit; text-decoration: none; }
 }
 .edu-item h4 {
   font-family: var(--f-display);
-  font-weight: 800;
+  font-weight: 600;
   font-size: var(--t-lg);
   letter-spacing: -0.01em;
 }
@@ -663,7 +662,7 @@ a { color: inherit; text-decoration: none; }
   padding-block: var(--s4);
   border-bottom: 1px solid var(--border);
   font-family: var(--f-display);
-  font-weight: 700;
+  font-weight: 400;
   font-size: var(--t-md);
   color: var(--t-hi);
   letter-spacing: 0.01em;
@@ -726,7 +725,7 @@ a { color: inherit; text-decoration: none; }
 
 .cta-heading {
   font-family: var(--f-display);
-  font-weight: 900;
+  font-weight: 700;
   font-size: var(--t-2xl);
   line-height: 0.92;
   text-transform: uppercase;
