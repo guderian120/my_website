@@ -1,0 +1,350 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
+
+  .cl-page {
+    font-family: 'DM Sans', sans-serif;
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    color: var(--color-text-primary);
+    position: relative;
+  }
+
+  .cl-accent-bar {
+    width: 3px;
+    height: 80px;
+    background: #1D9E75;
+    position: absolute;
+    left: 0;
+    top: 2.5rem;
+    border-radius: 0 2px 2px 0;
+  }
+
+  .cl-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .cl-name-block h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 0 4px;
+    letter-spacing: -0.3px;
+    line-height: 1.2;
+  }
+
+  .cl-name-block h1 em {
+    font-style: italic;
+    color: #1D9E75;
+  }
+
+  .cl-tagline {
+    font-size: 12px;
+    font-weight: 300;
+    color: var(--color-text-secondary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .cl-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+  }
+
+  .cl-contact a, .cl-contact span {
+    font-size: 12.5px;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 0.2px;
+  }
+
+  .cl-contact a:hover { color: #1D9E75; }
+
+  .cl-contact-dot {
+    color: #1D9E75;
+    margin: 0 4px;
+    font-size: 10px;
+  }
+
+  .cl-meta {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cl-meta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .cl-meta-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1D9E75;
+    font-weight: 500;
+  }
+
+  .cl-meta-value {
+    font-size: 13.5px;
+    color: var(--color-text-primary);
+    font-style: italic;
+    font-family: 'DM Serif Display', serif;
+  }
+
+  .cl-body {
+    font-size: 14.5px;
+    line-height: 1.85;
+    color: var(--color-text-primary);
+  }
+
+  .cl-salutation {
+    font-family: 'DM Serif Display', serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 1.2rem;
+    color: var(--color-text-primary);
+  }
+
+  .cl-paragraph {
+    margin-bottom: 1.1rem;
+    font-weight: 300;
+  }
+
+  .cl-highlight {
+    color: #0F6E56;
+    font-weight: 500;
+  }
+
+  .cl-closing {
+    margin-top: 2rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 15px;
+    color: var(--color-text-secondary);
+  }
+
+  .cl-signature {
+    font-family: 'DM Serif Display', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: var(--color-text-primary);
+    margin-top: 6px;
+  }
+
+  .cl-cert-strip {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .cl-cert {
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 0.5px solid #1D9E75;
+    color: #0F6E56;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+  }
+
+  .cl-divider {
+    width: 32px;
+    height: 2px;
+    background: #1D9E75;
+    margin: 1.5rem 0;
+    border-radius: 2px;
+  }
+
+  .input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .field-wrap { display: flex; flex-direction: column; gap: 4px; }
+  .field-wrap label { font-size: 10px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--color-text-secondary); }
+  .field-wrap input {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    padding: 6px 10px;
+    color: var(--color-text-primary);
+    outline: none;
+    transition: border-color 0.15s;
+  }
+  .field-wrap input:focus { border-color: #1D9E75; }
+
+  .print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    padding: 7px 16px;
+    border-radius: var(--border-radius-md);
+    border: 0.5px solid #1D9E75;
+    color: #0F6E56;
+    background: transparent;
+    cursor: pointer;
+    letter-spacing: 0.3px;
+    transition: background 0.15s;
+  }
+  .print-btn:hover { background: #E1F5EE; }
+
+  .cl-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 0.5px solid var(--color-border-tertiary);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .toolbar-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--color-text-secondary);
+  }
+</style>
+
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Andy Amponsah Cover Letter Template — fill in the date, company, and hiring manager fields below</h2>
+
+<div class="cl-toolbar">
+  <span class="toolbar-label">Cover Letter Template</span>
+  <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
+</div>
+
+<div class="input-row">
+  <div class="field-wrap">
+    <label>Date</label>
+    <input type="text" id="f-date" placeholder="e.g. 9 April 2026" oninput="refresh()">
+  </div>
+  <div class="field-wrap">
+    <label>Job Title</label>
+    <input type="text" id="f-jobtitle" placeholder="e.g. Senior DevOps Engineer" oninput="refresh()">
+  </div>
+  <div class="field-wrap">
+    <label>Hiring Manager's Name</label>
+    <input type="text" id="f-manager" placeholder="e.g. Sarah Chen" oninput="refresh()">
+  </div>
+  <div class="field-wrap">
+    <label>Company Name</label>
+    <input type="text" id="f-company" placeholder="e.g. Acme Corp" oninput="refresh()">
+  </div>
+  <div class="field-wrap" style="grid-column: 1/-1;">
+    <label>Company Address</label>
+    <input type="text" id="f-address" placeholder="e.g. 42 Innovation Drive, London, UK" oninput="refresh()">
+  </div>
+  <div class="field-wrap" style="grid-column: 1/-1;">
+    <label>Why this company? (one sentence)</label>
+    <input type="text" id="f-reason" placeholder="e.g. your commitment to open-source infrastructure and distributed systems at scale" oninput="refresh()">
+  </div>
+</div>
+
+<div class="cl-page" id="letter">
+  <div class="cl-accent-bar"></div>
+
+  <div class="cl-header">
+    <div class="cl-name-block">
+      <h1>Andy <em>Amponsah</em></h1>
+      <p class="cl-tagline">DevOps Engineer &nbsp;·&nbsp; SRE &nbsp;·&nbsp; Cloud Infrastructure</p>
+    </div>
+    <div class="cl-contact">
+      <span><a href="mailto:officialamponsah@gmail.com">officialamponsah@gmail.com</a></span>
+      <span><a href="tel:+233598113407">+233 598 113 407</a></span>
+      <span><a href="https://github.com/guderian120" target="_blank">github.com/guderian120</a></span>
+      <span><a href="https://linkedin.com/in/andyamponsah" target="_blank">linkedin.com/in/andyamponsah</a></span>
+    </div>
+  </div>
+
+  <div class="cl-meta" id="meta-block">
+    <div class="cl-meta-block">
+      <span class="cl-meta-label">Date</span>
+      <span class="cl-meta-value" id="display-date">[Date]</span>
+    </div>
+    <div class="cl-meta-block">
+      <span class="cl-meta-label">To</span>
+      <span class="cl-meta-value" id="display-to">[Hiring Manager] · [Company] · [Address]</span>
+    </div>
+  </div>
+
+  <div class="cl-body">
+    <p class="cl-salutation" id="display-salutation">Dear [Hiring Manager's Name / Hiring Team],</p>
+
+    <p class="cl-paragraph">I am writing to express my interest in the <span class="cl-highlight" id="display-jobtitle">[Job Title]</span> position at <span class="cl-highlight" id="display-company1">[Company Name]</span>. With over three years of hands-on experience designing, automating, and operating cloud infrastructure at scale, I am confident in my ability to contribute meaningfully to your engineering team from day one.</p>
+
+    <p class="cl-paragraph">My experience spans the full DevOps lifecycle. At AmaliTech Ghana, I designed and implemented CI/CD pipelines using Jenkins that reduced deployment times by <span class="cl-highlight">40%</span> through parallel build execution and automated test gates. I provisioned and managed <span class="cl-highlight">50+ EC2 instances</span>, RDS databases, and S3 buckets across three environments using Terraform and CloudFormation, and containerised over <span class="cl-highlight">15 applications</span> with Docker and Kubernetes — ultimately achieving a <span class="cl-highlight">25% reduction in AWS infrastructure costs</span> through right-sizing and intelligent auto-scaling.</p>
+
+    <p class="cl-paragraph">More recently at Tap and Hops, I led a structural shift away from manual "ClickOps" towards a fully automated, GitOps-driven infrastructure model. I built and managed EKS clusters, implemented Blue-Green deployment strategies that eliminated downtime, and integrated proactive monitoring stacks (Prometheus, Grafana, and CloudWatch) that improved incident response times by <span class="cl-highlight">60%</span>.</p>
+
+    <p class="cl-paragraph">What sets me apart is my full-stack engineering background. Having built and deployed Django web applications through my own company, Kryotech Software Solutions, I understand both the development and operational sides of software delivery. I approach infrastructure with the same rigour I apply to code: reusable, tested, and version-controlled.</p>
+
+    <div class="cl-cert-strip">
+      <span class="cl-cert">AWS Certified Cloud Practitioner</span>
+      <span class="cl-cert">KCNA</span>
+      <span class="cl-cert">Linux Essentials</span>
+      <span class="cl-cert">Google Cloud Associate</span>
+    </div>
+    <p class="cl-paragraph" style="margin-top: 0.6rem;">I am currently pursuing an <span class="cl-highlight">MS in Information Technology</span> specialising in Cloud and SRE at Wisconsin International University College.</p>
+
+    <div class="cl-divider"></div>
+
+    <p class="cl-paragraph">I am particularly drawn to <span class="cl-highlight" id="display-company2">[Company Name]</span> because <span id="display-reason">[insert genuine reason — mission, product, engineering culture, tech stack, etc.]</span>. I would welcome the opportunity to discuss how my background aligns with your team's goals.</p>
+
+    <p class="cl-paragraph">Thank you for your time and consideration.</p>
+
+    <div class="cl-closing">Warm regards,</div>
+    <div class="cl-signature">Andy Amponsah</div>
+  </div>
+</div>
+
+<script>
+function val(id) { return document.getElementById(id).value.trim(); }
+function set(id, text, fallback) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = text || fallback;
+}
+
+function refresh() {
+  const date = val('f-date');
+  const manager = val('f-manager');
+  const company = val('f-company');
+  const address = val('f-address');
+  const jobtitle = val('f-jobtitle');
+  const reason = val('f-reason');
+
+  set('display-date', date, '[Date]');
+
+  const toParts = [manager || '[Hiring Manager]', company || '[Company]', address || '[Address]'].join(' · ');
+  set('display-to', toParts);
+
+  const salutation = manager ? `Dear ${manager},` : 'Dear Hiring Team,';
+  set('display-salutation', salutation);
+
+  set('display-jobtitle', jobtitle, '[Job Title]');
+  set('display-company1', company, '[Company Name]');
+  set('display-company2', company, '[Company Name]');
+  set('display-reason', reason, '[insert genuine reason — mission, product, engineering culture, tech stack, etc.]');
+}
+</script>
