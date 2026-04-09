@@ -2,11 +2,24 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap');
 
+  @media print {
+    .no-print { display: none !important; }
+    .cl-page { padding: 0 !important; max-width: 100% !important; }
+    .cl-accent-bar { display: block !important; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    @page { margin: 1.5cm 2cm; size: A4; }
+    a { color: inherit !important; text-decoration: none !important; }
+    .cl-highlight { color: #0F6E56 !important; }
+    .cl-cert { border: 0.5px solid #1D9E75 !important; color: #0F6E56 !important; }
+    .cl-accent-bar { background: #1D9E75 !important; }
+    .cl-divider { background: #1D9E75 !important; }
+  }
+
   .cl-page {
     font-family: 'DM Sans', sans-serif;
     max-width: 780px;
     margin: 0 auto;
-    padding: 2.5rem 2rem;
+    padding: 2rem 2rem 2.5rem;
     color: var(--color-text-primary);
     position: relative;
   }
@@ -17,7 +30,7 @@
     background: #1D9E75;
     position: absolute;
     left: 0;
-    top: 2.5rem;
+    top: 2rem;
     border-radius: 0 2px 2px 0;
   }
 
@@ -41,10 +54,7 @@
     line-height: 1.2;
   }
 
-  .cl-name-block h1 em {
-    font-style: italic;
-    color: #1D9E75;
-  }
+  .cl-name-block h1 em { font-style: italic; color: #1D9E75; }
 
   .cl-tagline {
     font-size: 12px;
@@ -72,23 +82,13 @@
 
   .cl-contact a:hover { color: #1D9E75; }
 
-  .cl-contact-dot {
-    color: #1D9E75;
-    margin: 0 4px;
-    font-size: 10px;
-  }
-
   .cl-meta {
     display: flex;
     gap: 2rem;
     margin-bottom: 2rem;
   }
 
-  .cl-meta-block {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-  }
+  .cl-meta-block { display: flex; flex-direction: column; gap: 2px; }
 
   .cl-meta-label {
     font-size: 10px;
@@ -124,10 +124,7 @@
     font-weight: 300;
   }
 
-  .cl-highlight {
-    color: #0F6E56;
-    font-weight: 500;
-  }
+  .cl-highlight { color: #0F6E56; font-weight: 500; }
 
   .cl-closing {
     margin-top: 2rem;
@@ -228,14 +225,14 @@
   }
 </style>
 
-<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Andy Amponsah Cover Letter Template — fill in the date, company, and hiring manager fields below</h2>
+<h2 class="sr-only" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);">Andy Amponsah Cover Letter Template</h2>
 
-<div class="cl-toolbar">
+<div class="cl-toolbar no-print">
   <span class="toolbar-label">Cover Letter Template</span>
   <button class="print-btn" onclick="window.print()">Print / Save PDF</button>
 </div>
 
-<div class="input-row">
+<div class="input-row no-print">
   <div class="field-wrap">
     <label>Date</label>
     <input type="text" id="f-date" placeholder="e.g. 9 April 2026" oninput="refresh()">
@@ -278,7 +275,7 @@
     </div>
   </div>
 
-  <div class="cl-meta" id="meta-block">
+  <div class="cl-meta">
     <div class="cl-meta-block">
       <span class="cl-meta-label">Date</span>
       <span class="cl-meta-value" id="display-date">[Date]</span>
@@ -325,7 +322,6 @@ function set(id, text, fallback) {
   const el = document.getElementById(id);
   if (el) el.textContent = text || fallback;
 }
-
 function refresh() {
   const date = val('f-date');
   const manager = val('f-manager');
@@ -333,15 +329,10 @@ function refresh() {
   const address = val('f-address');
   const jobtitle = val('f-jobtitle');
   const reason = val('f-reason');
-
   set('display-date', date, '[Date]');
-
   const toParts = [manager || '[Hiring Manager]', company || '[Company]', address || '[Address]'].join(' · ');
   set('display-to', toParts);
-
-  const salutation = manager ? `Dear ${manager},` : 'Dear Hiring Team,';
-  set('display-salutation', salutation);
-
+  set('display-salutation', manager ? `Dear ${manager},` : 'Dear Hiring Team,');
   set('display-jobtitle', jobtitle, '[Job Title]');
   set('display-company1', company, '[Company Name]');
   set('display-company2', company, '[Company Name]');
